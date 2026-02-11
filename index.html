@@ -1,34 +1,60 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Dancing Pot</title>
+    <link rel="stylesheet" href="css/main-styling.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li>
-            <a href="cart.html"
-              ><img src="images/cart-icon.jpg" alt="cart icon"
-            /></a>
-          </li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html">Grocery List</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Stella Vida</h1>
-      <h2>Welcome to our groovy grocery store </h2>
-      <h3>Cart</h2>
-      <a href="products.html">Shop the Good Stuff</a>
+
+    <main class="hero">
+      <img
+        src="images/index-main.png"
+        alt="Home page image"
+        class="hero-image"
+      />
+
+      <div class="hero-content">
+        <h1 class="h1">The Dancing Pot</h1>
+        <h2 class="h2">welcome to our groovy grocery store</h2>
+        <a href="products.html" class="hero-button">Shop the Good Stuff</a>
+      </div>
+
+      <div class="hero-zone zone-1">
+        <button>Are you hungry?</button>
+      </div>
+
+      <div class="hero-zone zone-2">
+        <button>Are you thirsty?</button>
+      </div>
+
+      <div class="hero-zone zone-3">
+        <button>Want a sweet treat?</button>
+      </div>
     </main>
-    <footer>
-      You dont look like a follower,
-      but just in case 
-      <img src="" alt="">
+
+    <footer class="footer">
+      <p>You dont look like a follower, but just in case</p>
+
+      <div class="footer-icons">
+        <img src="images/Instagram-logo.png" alt="Insta Logo" />
+        <img src="images/tiktok-logo.png.webp" alt="Tiktok logo" />
+        <img src="images/facebook-logo.png" alt="Facebook Logo" />
+      </div>
+
+      <small>&copy; 2026 The Dancing Pot Grocers</small>
     </footer>
   </body>
 </html>
