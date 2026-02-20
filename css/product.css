@@ -1,0 +1,140 @@
+:root {
+  --disco-blue: #0047ff;
+  --bright-yellow: #ffff00;
+  --hot-black: #000000;
+  --white: #ffffff;
+  --border-stroke: 4px solid var(--hot-black);
+  --brutalist-shadow: 8px 8px 0px var(--hot-black);
+}
+
+body {
+  background-color: var(--disco-blue);
+  padding: 40px;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.display-font {
+  font-family: "Bungee", cursive;
+}
+
+/* THE MAIN FLEX ROW */
+.product-main-row {
+  display: flex;
+  gap: 40px; /* Visible gap between columns */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: var(--white);
+  border: var(--border-stroke);
+  border-radius: 24px;
+  box-shadow: var(--brutalist-shadow);
+  padding: 30px;
+}
+
+/* LEFT COLUMN */
+.image-container {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+}
+.image-container img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* RIGHT COLUMN STACK */
+.info-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Visible gap between the two cards in the right column */
+}
+
+.details-box h1 {
+  font-size: 3rem;
+  margin: 0 0 20px 0;
+  color: var(--disco-blue);
+}
+
+.purchase-box {
+  background-color: var(--bright-yellow);
+}
+
+.price-qty-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border: 3px solid black;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  font-family: "Bungee";
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.price-text {
+  font-family: "Bungee";
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background: var(--disco-blue);
+  color: white;
+  font-family: "Bungee";
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px black;
+}
+
+/* THE HORIZONTAL GAP */
+.disco-divider {
+  height: 60px; /* The gap between your two rows */
+  margin: 40px 0;
+  background-image: radial-gradient(var(--bright-yellow) 20%, transparent 20%);
+  background-size: 30px 30px; /* Fun disco-dot pattern gap */
+}
+
+/* BOTTOM GRID */
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.mini-card {
+  height: 250px;
+  background: white;
+  border: var(--border-stroke);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px black;
+  overflow: hidden;
+}
+.mini-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

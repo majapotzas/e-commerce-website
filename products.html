@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Products Page</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/products-style.css" />
   </head>
@@ -20,105 +20,109 @@
       </nav>
     </header>
 
-    <main class="heading">
-      <h1>The Goods</h1>
+    <main class="products-layout">
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <input
+          type="text"
+          placeholder="Search products..."
+          class="search-bar"
+        />
 
-      <details class="summary">
-        <summary>Feeling Hungry?</summary>
+        <h3>Menu</h3>
+        <ul class="category-menu">
+          <li>Bakery</li>
+          <li>Tea & Coffee</li>
+          <li>Dairy</li>
+          <li>Deli</li>
+          <li>Fruit & Veg</li>
+          <li>Sweet stuff</li>
+        </ul>
+      </aside>
 
-        <div class="products">
-          <section class="product">
+      <!-- column 2 -->
+      <section class="products-column">
+        <h2>Feeling hungry?</h2>
+
+        <!-- <div class="product-grid">
+              <div class="product-card">
+               <img src="images/olives.jpg" alt="Gorgeous green olives" />
+               <!-- <h4>Gorgeous Green Olives</h4>
+               <p class="price">45 SEK</p> -->
+        <!-- <a href="product.html">View the deets</a>
+            </div> -->
+
+        <div class="product-grid">
+          <a href="product.html" class="product-card">
             <img src="images/olives.jpg" alt="Gorgeous green olives" />
-            <h4>Gorgeous Green Olives</h4>
-            <p class="price">45 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          </a>
 
-          <section class="product">
-            <img src="images/nduja.jpg" alt="Spicy nduja" />
-            <h4>Spicy Nduja</h4>
-            <p class="price">69 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          <a href="product.html" class="product-card">
+            <img src="images/nduja.jpg" alt="Spicy Nduja" />
+          </a>
 
-          <section class="product">
+          <a href="product.html" class="product-card">
             <img
-              src="images/sexy-sun-ripened-tomatoes.jpg"
-              alt="Sexy sun-ripened Tomatoes"
+              src="images/sundried-tomatoes.jpg"
+              alt="Sexy Sundried Tomatoes"
             />
-            <h4>Sexy sun-ripened Tomatoes</h4>
-            <p class="price">35 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          </a>
 
-          <section class="product">
+          <a href="product.html" class="product-card">
             <img src="images/prosciutto.jpg" alt="Perf Prosciutto" />
-            <h4>Perf Prosciutto</h4>
-            <p class="price">80 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          </a>
 
-          <section class="product">
-            <img
-              src="images/magnifique-mature-cheddar.jpg"
-              alt="Magnifique Mature Cheddar"
-            />
-            <h4>Magnifique Mature Cheddar</h4>
-            <p class="price">59 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          <a href="product.html" class="product-card">
+            <img src="images/cheddar.jpg" alt="Magnifique Mature Cheddar" />
+          </a>
 
-          <section class="product">
-            <img src="images/truffle-crisps.jpg" alt="Truffle Crisps" />
-            <h4>Truffle Crisps</h4>
-            <p class="price">35 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          <a href="product.html" class="product-card">
+            <img src="images/truffle-crisps.jpg" alt="Terrfic Truffle Crisps" />
+          </a>
 
-          <section class="product">
-            <img src="images/fabulous-figs.jpg" alt="Fabulous Figs" />
-            <h4>Fabulous Figs</h4>
-            <p class="price">49 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          <a href="product.html" class="product-card">
+            <img src="images/figs.jpg" alt="Fab Figs" />
+          </a>
 
-          <section class="product">
-            <img
-              src="images/to-die-4-dried-mango.jpg"
-              alt="To die 4 Dried Mango"
-            />
-            <h4>To die 4 Dried Mango</h4>
-            <p class="price">75 SEK</p>
-            <a href="product.html">View the deets</a>
-          </section>
+          <a href="product.html" class="product-card">
+            <img src="images/dried-mango.jpg" alt="2 die 4 Dried Mango" />
+          </a>
         </div>
-      </details>
+      </section>
 
-      <details class="summary">
-        <summary>Feeling Thirsty?</summary>
+      <section class="products-column">
+        <h2>Feeling thirsty?</h2>
 
-        <div class="products">
-          <section class="product">
-            <img src="images/an-4-red-wine.jpg" alt="AN/4 Red Wine" />
-            <h4>A/N 4</h4>
+        <a href="product.html" class="product-card">
+          <img src="images/an-4-redwine.jpg" alt="AN/2 Rouge Vino" />
+        </a>
+
+        <!-- <div class="product-grid">
+          <div class="product-card">
+            <img src="images/olives.jpg" alt="AN/4 Red Wine" />
+            <h4>A/N 2</h4>
             <p class="price">200 SEK</p>
             <a href="product.html">View the deets</a>
-          </section>
-        </div>
-      </details>
+          </div>
+        </div> -->
+      </section>
 
-      <details class="summary">
-        <summary>Feeling a Sweet Treat?</summary>
+      <section class="products-column">
+        <h2>Fancy a sweet treat?</h2>
 
-        <div class="products">
-          <section class="product">
-            <img src="images/swedish-cinnamon-bun" alt="Swedish Cinnamon Bun" />
+        <a href="product.html" class="product-card">
+          <img src="images/cinn-bun.jpg" alt="Swedes Buns" />
+        </a>
+
+        <!-- <div class="product-grid">
+          <div class="product-card">
+            <img src="images/olives.jpg" alt="Swedish Cinnamon Bun" />
             <h4>Swedish Cinnamon Bun</h4>
             <p class="price">45 SEK</p>
             <a href="product.html">View the deets</a>
-          </section>
-        </div>
-      </details>
+          </div>
+        </div> -->
+      </section>
       <!--used Chatgpt to help me with a drop down menu and was given the instruction of using <summary></summary>-->
     </main>
   </body>

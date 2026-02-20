@@ -1,74 +1,154 @@
-.heading h1 {
-  text-align: center;
-  font-size: 2rem;
+* {
+  box-sizing: border-box;
 }
 
-summary {
-  cursor: pointer;
-  font-size: 1.2rem;  
-  font-weight: lighter;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 14px;
-  background-color: white;
-  border-radius: 1px;
-  list-style: none;
-  margin-bottom: 1px;
+body {
+  background-color: blue;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: white;
 }
 
-summary:hover {
-  background-color: #fdfd96;
-}
-.products {
+.products-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
-  margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* GRID */
-.products {
+.sidebar {
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.category-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.category-menu li {
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.category-menu li:hover {
+  text-decoration: underline;
+}
+
+.product-column h2 {
+  margin-bottom: 20px;
+}
+
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-  margin-top: 5px;
+  gap: 20px;
 }
 
-/* INDIVIDUAL PRODUCT */
-.product {
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 10px;
-  background-color: white;
-  text-align: center;
-}
-
-.product img {
-  height: 140px;
-  object-fit: cover;
-}
-
-.product h4 {
-  margin: 10px 0 5px;
-}
-
-.product a {
-  display: inline-block;
-  margin-top: 8px;
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
   text-decoration: none;
-  color: white;
-  background: black;
-  padding: 6px 10px;
-  border-radius: 4px;
+  color: inherit;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  /* border: 1px solid #e5e5e5;
+  background: yellow;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease; */
 }
 
-details {
-  margin-bottom: 25px;
-  border-radius: 8px;
+/* .product-card img {
+  width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+/* display: block;
+} */
+
+.product-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-details[open] summary {
-  background-color: #eaeaea;
+.product-card:hover {
+  transform: translateY(-4px);
 }
 
-rem is better for when you use break points
+.sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+/* Tablet and below = stacked */
+@media (max-width: 1023px) {
+  /* .products-layout {
+    grid-template-columns: 100px;
+  } */
+  .sidebar {
+    position: sticky;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+}
+
+/* laptop sized screens */
+@media (min-width: 1024px) {
+  .products-layout {
+    grid-template-columns: 100px 1fr 1fr 1fr;
+  }
+
+  .product-card {
+    padding: 15px;
+
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      border-right: 1px solid #ddd;
+      border-bottom: none;
+    }
+  }
+}
+
+/* large desktop */
+@media (min-width: 1280px) {
+  .products-layout {
+    grid-template-columns: 220px 1fr 1fr 1fr;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+} */

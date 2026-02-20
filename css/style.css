@@ -41,16 +41,20 @@ nav ul li a {
   padding: 0.5rem 1.2rem;
   border-radius: 6px;
 
-  background-color: blue;
-  color: blue
+  /* background-color: blue;
+  color: blue */
+  background-color: yellow;
+  color: blue;
 
   font-weight: 600;
   transition: all 0.25s ease;
 }
 
 nav ul li a:hover {
-  background-color: rgb(255, 255, 0);
-  color: blue;
+  /* background-color: rgb(255, 255, 0);
+  color: blue; */
+  background-color: blue;
+  color: yellow;
   transform: translateY(-2px);
 }
 
