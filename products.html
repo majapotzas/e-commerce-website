@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products Page</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/products-style.css" />
   </head>
@@ -14,7 +18,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Our Story</a></li>
           <li>
-            <a href="cart.html">Grocery List</a>
+            <a href="cart.html">Grocery List<span id="cart-count">0</span></a>
           </li>
         </ul>
       </nav>
@@ -43,14 +47,6 @@
       <!-- column 2 -->
       <section class="products-column">
         <h2>Feeling hungry?</h2>
-
-        <!-- <div class="product-grid">
-              <div class="product-card">
-               <img src="images/olives.jpg" alt="Gorgeous green olives" />
-               <!-- <h4>Gorgeous Green Olives</h4>
-               <p class="price">45 SEK</p> -->
-        <!-- <a href="product.html">View the deets</a>
-            </div> -->
 
         <div class="product-grid">
           <a href="product.html" class="product-card">
@@ -96,15 +92,6 @@
         <a href="product.html" class="product-card">
           <img src="images/an-4-redwine.jpg" alt="AN/2 Rouge Vino" />
         </a>
-
-        <!-- <div class="product-grid">
-          <div class="product-card">
-            <img src="images/olives.jpg" alt="AN/4 Red Wine" />
-            <h4>A/N 2</h4>
-            <p class="price">200 SEK</p>
-            <a href="product.html">View the deets</a>
-          </div>
-        </div> -->
       </section>
 
       <section class="products-column">
@@ -113,17 +100,61 @@
         <a href="product.html" class="product-card">
           <img src="images/cinn-bun.jpg" alt="Swedes Buns" />
         </a>
-
-        <!-- <div class="product-grid">
-          <div class="product-card">
-            <img src="images/olives.jpg" alt="Swedish Cinnamon Bun" />
-            <h4>Swedish Cinnamon Bun</h4>
-            <p class="price">45 SEK</p>
-            <a href="product.html">View the deets</a>
-          </div>
-        </div> -->
       </section>
+      <div id="cart-toast" class="toast-hidden">
+        Added to your grocery list!
+      </div>
       <!--used Chatgpt to help me with a drop down menu and was given the instruction of using <summary></summary>-->
     </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="footer-content-wrapper">
+          <div class="newsletter-group">
+            <h3 class="display-font">Join our grocers & get in the groove</h3>
+            <ul class="groovy-list">
+              <li>Offers & exclusive discounts just for you</li>
+              <li>Be the first to know all the groovy deets</li>
+            </ul>
+            <div class="subscribe-form">
+              <input
+                type="email"
+                placeholder="        @      .com"
+                class="email-input"
+              />
+              <button class="arrow-btn">→</button>
+            </div>
+          </div>
+
+          <div class="hours-group">
+            <h4 class="display-font">Opening Hours</h4>
+            <p>Mon - Fri: 08:00 - 20:00</p>
+            <p>Sat: 10:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="display-font">
+          You don't look like a follower, but just in case...
+        </p>
+
+        <div class="footer-icons">
+          <img src="images/Instagram-logo.png" alt="Insta" />
+          <img src="images/tiktok-logo.png" alt="Tiktok" />
+          <img src="images/facebook-logo.png" alt="Facebook" />
+        </div>
+
+        <div class="payment-icons">
+          <span>VISA</span> <span>MASTERCARD</span> <span>KLARNA</span>
+          <span>PAYPAL</span> <span>SWISH</span>
+        </div>
+
+        <small class="copyright">&copy; 2026 THE DANCING POT GROCERS</small>
+      </div>
+
+      <a href="#" class="back-to-top">TOP ↑</a>
+    </footer>
+    <script src="addtocart.js"></script>
   </body>
 </html>

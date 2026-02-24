@@ -1,18 +1,104 @@
-<link rel="stylesheet" href="ccs/style.css" />
-<main class="cart">
-  <h1>Your Cart</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    </html>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/cart.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600&display=swap"
+  rel="stylesheet"
+/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li>
+            <a href="cart.html">Grocery List<span id="cart-count">0</span></a>
+        </li>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 
-  <div class="cart-item">
-    <img src="images/olives.jpg" alt="Olives" />
-    <div>
-      <h4>Gorgeous Green Olives</h4>
-      <p>€4.50</p>
+<main class="cart-wrapper">
+  <h1 class="display-font">Your Grocery List</h1>
+
+  <div id="cart-items-container">
+    <div class="cart-item">
+      <img src="images/olives.jpg" alt="Olives" />
+      <div class="item-info">
+        <h4 class="display-font">Gorgeous Green Olives</h4>
+        <p class="price">€4.50</p>
+      </div>
+      <button class="remove-btn">REMOVE</button>
     </div>
-    <button>Remove</button>
   </div>
 
-  <div class="cart-total">
-    <p>Total: €4.50</p>
-    <button>Checkout</button>
+  <div class="cart-summary">
+    <h3 class="display-font">
+      Total: <span id="cart-total-price">€4.50</span>
+    </h3>
+    <div class="cart-buttons">
+      <button class="secondary-btn" onclick="clearCart()">Empty List</button>
+      <button class="checkout-btn">Checkout →</button>
+    </div>
   </div>
 </main>
+<footer class="footer">
+      <div class="footer-left">
+        <div class="footer-content-wrapper">
+          <div class="newsletter-group">
+            <h3 class="display-font">Join our grocers & get in the groove</h3>
+            <ul class="groovy-list">
+              <li>Offers & exclusive discounts just for you</li>
+              <li>Be the first to know all the groovy deets</li>
+            </ul>
+            <div class="subscribe-form">
+              <input
+                type="email"
+                placeholder="        @      .com"
+                class="email-input"
+              />
+              <button class="arrow-btn">→</button>
+            </div>
+          </div>
+
+          <div class="hours-group">
+            <h4 class="display-font">Opening Hours</h4>
+            <p>Mon - Fri: 08:00 - 20:00</p>
+            <p>Sat: 10:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="display-font">
+          You don't look like a follower, but just in case...
+        </p>
+
+        <div class="footer-icons">
+          <img src="images/Instagram-logo.png" alt="Insta" />
+          <img src="images/tiktok-logo.png" alt="Tiktok" />
+          <img src="images/facebook-logo.png" alt="Facebook" />
+        </div>
+
+        <div class="payment-icons">
+          <span>VISA</span> <span>MASTERCARD</span> <span>KLARNA</span>
+          <span>PAYPAL</span> <span>SWISH</span>
+        </div>
+
+        <small class="copyright">&copy; 2026 THE DANCING POT GROCERS</small>
+      </div>
+
+      <a href="#" class="back-to-top">TOP ↑</a>
+    </footer>
+    <script src="addtocart.js"></script>
+  </body>
+</html>

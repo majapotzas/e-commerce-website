@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Dancing Pot</title>
-    <link rel="stylesheet" href="css/main-styling.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/main-styling.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="addtocart.js"></script>
   </head>
 
   <body>
@@ -15,7 +19,9 @@
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="about.html">Our Story</a></li>
-          <li><a href="cart.html">Grocery List</a></li>
+          <li>
+            <a href="cart.html">Grocery List<span id="cart-count">0</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -49,16 +55,55 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <p>You dont look like a follower, but just in case</p>
+    <div id="cart-toast" class="toast-hidden">Added to your grocery list!</div>
 
-      <div class="footer-icons">
-        <img src="images/Instagram-logo.png" alt="Insta Logo" />
-        <img src="images/tiktok-logo.png.webp" alt="Tiktok logo" />
-        <img src="images/facebook-logo.png" alt="Facebook Logo" />
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="footer-content-wrapper">
+          <div class="newsletter-group">
+            <h3 class="display-font">Join our grocers & get in the groove</h3>
+            <ul class="groovy-list">
+              <li>Offers & exclusive discounts just for you</li>
+              <li>Be the first to know all the groovy deets</li>
+            </ul>
+            <div class="subscribe-form">
+              <input
+                type="email"
+                placeholder="        @      .com"
+                class="email-input"
+              />
+              <button class="arrow-btn">→</button>
+            </div>
+          </div>
+
+          <div class="hours-group">
+            <h4 class="display-font">Opening Hours</h4>
+            <p>Mon - Fri: 08:00 - 20:00</p>
+            <p>Sat: 10:00 - 18:00</p>
+          </div>
+        </div>
       </div>
 
-      <small>&copy; 2026 The Dancing Pot Grocers</small>
+      <div class="footer-right">
+        <p class="display-font">
+          You don't look like a follower, but just in case...
+        </p>
+
+        <div class="footer-icons">
+          <img src="images/Instagram-logo.png" alt="Insta" />
+          <img src="images/tiktok-logo.png" alt="Tiktok" />
+          <img src="images/facebook-logo.png" alt="Facebook" />
+        </div>
+
+        <div class="payment-icons">
+          <span>VISA</span> <span>MASTERCARD</span> <span>KLARNA</span>
+          <span>PAYPAL</span> <span>SWISH</span>
+        </div>
+
+        <small class="copyright">&copy; 2026 THE DANCING POT GROCERS</small>
+      </div>
+
+      <a href="#" class="back-to-top">TOP ↑</a>
     </footer>
   </body>
 </html>

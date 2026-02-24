@@ -23,10 +23,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 15vh;
+  padding-top: 9vh;
 
   z-index: 2;
   color: white;
+  
 }
 
 .h1,
@@ -37,14 +38,17 @@
 .h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  font-weight: 400;
   line-height: 1.1;
+  font-family: "Bungee", cursive;
 }
 
 .h2 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  font-weight: lighter;
+  font-weight: normal;
   line-height: 1.3;
+  font-family: "Bungee", cursive;
 }
 
 .hero-button {
@@ -56,6 +60,7 @@
   padding: 0.8rem 1.8rem;
   text-decoration: none;
   font-weight: 600;
+  font-family: "Bungee", cursive;
   border-radius: 6px;
 
   transition:
@@ -107,3 +112,4 @@
   opacity: 1;
   transform: translateY(0);
 }
+

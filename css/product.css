@@ -1,17 +1,17 @@
 :root {
-  --disco-blue: #0047ff;
-  --bright-yellow: #ffff00;
-  --hot-black: #000000;
-  --white: #ffffff;
+  --disco-blue: blue;
+  --bright-yellow: yellow;
+  --hot-black: black;
+  --white: white;
   --border-stroke: 4px solid var(--hot-black);
   --brutalist-shadow: 8px 8px 0px var(--hot-black);
 }
 
 body {
-  background-color: var(--disco-blue);
-  padding: 40px;
+  background-color: blue;
+  padding: 0;
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .display-font {
@@ -24,6 +24,8 @@ body {
   gap: 40px; /* Visible gap between columns */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 10px;
+  /* box-sizing: border-box; */
 }
 
 .product-card {
@@ -95,9 +97,10 @@ body {
 
 .add-to-cart-btn {
   width: 100%;
-  background: var(--disco-blue);
+  background: blue;
   color: white;
   font-family: "Bungee";
+  font-size: 0.8rem;
   padding: 20px;
   border: 3px solid black;
   border-radius: 12px;
@@ -108,6 +111,11 @@ body {
 .add-to-cart-btn:hover {
   transform: translate(-4px, -4px);
   box-shadow: 6px 6px 0px black;
+}
+
+.add-to-cart-btn:active {
+  transform: translate(0, 0); /* Moves back down when clicked */
+  box-shadow: none; /* Shadow disappears to look 'pressed' */
 }
 
 /* THE HORIZONTAL GAP */
