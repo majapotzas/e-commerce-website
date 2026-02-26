@@ -26,8 +26,7 @@
   padding-top: 9vh;
 
   z-index: 2;
-  color: white;
-  
+  color: yellow;
 }
 
 .h1,
@@ -54,14 +53,16 @@
 .hero-button {
   display: inline-block;
   margin-top: 0.5rem;
-  background: rgb(255, 255, 0);
+  background: yellow;
 
   color: blue;
   padding: 0.8rem 1.8rem;
   text-decoration: none;
   font-weight: 600;
   font-family: "Bungee", cursive;
-  border-radius: 6px;
+  border: 4px solid black;
+  border-radius: 0;
+  box-shadow: 6px 6px 0px black;
 
   transition:
     transform 0.2s ease,
@@ -86,7 +87,7 @@
 }
 
 .hero-zone:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: black;
   transform: scale(1.03);
 }
 
@@ -99,17 +100,34 @@
   background: yellow;
   border: none;
   padding: 1rem 2rem;
-  font-size: 11pt;
+  font-size: 9pt;
+  font-family: "Bungee", cursive;
   color: blue;
   font-weight: 800;
-  border-radius: 25px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 0px;
   cursor: pointer;
   text-decoration: none;
   pointer-events: auto;
 }
+/* margin-top: 0.5rem;
+  background: yellow;
+
+  color: blue;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Bungee", cursive;
+  border: 4px solid black;
+  border-radius: 0;
+  box-shadow: px 6px 0px black;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease; */
 
 .hero-zone:hover .zone-btn {
   opacity: 1;
   transform: translateY(0);
 }
-
