@@ -35,10 +35,13 @@ h3,
 }
 
 .search-bar {
-  border: 3px solid black;
-  border-radius: 8px;
+  width: 100%; /* Fills the container */
+  box-sizing: border-box; /* forces borders/padding inside the width */
+  border: 4px solid black;
+  border-radius: 12px;
   padding: 15px;
-  width: 100%;
+  font-family: inherit;
+  outline: none;
 }
 
 .category-menu {
@@ -77,18 +80,19 @@ h3,
 }
 
 .product-card {
+  /* creates a white box around product image */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Makes the whole link area a box */
+  min-width: 0;
   background-color: white;
   border: 4px solid black;
   border-radius: 15px;
   padding: 10px;
   box-shadow: 6px 6px 0px black;
   transition: transform 0.2s ease; /* Smooth movement */
-  text-decoration: none; /* Removes the underline from links */
+  text-decoration: none; /* removes the underline from links */
 }
 
 .product-card img {
@@ -108,15 +112,20 @@ h3,
   align-self: start;
 }
 
+
+
 /* Tablet and below = stacked */
 @media (max-width: 1023px) {
+  .products-layout {
+    padding: 20px; /* yellow box doesn't touch the screen edges */
+    display: block; /*items stack vertically */
+  }
+
   .sidebar {
     position: static;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-    padding-right: 0;
-    padding-bottom: 10px;
-    padding-left: 1;
+    width: 100%;
+    box-sizing: border-box; /*yellow box stays within the 20px padding */
+    margin-bottom: 30px;
   }
 }
 
@@ -125,42 +134,18 @@ h3,
   .products-layout {
     grid-template-columns: 180px 1fr 1fr 1fr;
   }
-}
 
-.product-card {
-  padding: 15px;
-
-  .sidebar {
-    position: sticky;
-    top: 100px;
-    border-right: 1px solid #ddd;
-    border-bottom: none;
-  }
-}
-
-.footer-right {
-  text-align: center;
-}
-
-/* @media (min-width: 1025px) {
-  .products-layout {
-    grid-template-columns: 180px 1fr 1fr 1fr;
-  }
-} */
-/* large desktop
-@media (min-width: 1270px) {
-  .products-layout {
-    grid-template-columns: 220px 1fr 1fr 1fr;
-  }
   .product-card {
     padding: 15px;
 
     .sidebar {
       position: sticky;
       top: 100px;
-      padding-left: 5px;
       border-right: 1px solid #ddd;
       border-bottom: none;
     }
-  }
+    /* .footer-right {
+  text-align: center;
 } */
+  }
+}

@@ -118,13 +118,13 @@ body {
 }
 
 .add-to-cart-btn:active {
-  transform: translate(0, 0); /* Moves back down when clicked */
-  box-shadow: none; /* Shadow disappears to look 'pressed' */
+  transform: translate(0, 0); /* moves back down after clicked */
+  box-shadow: none; /* shadow disappears to look 'pressed' */
 }
 
 /* THE HORIZONTAL GAP */
 .disco-divider {
-  height: 60px; /* The gap between my two rows */
+  height: 60px; /* The gap between my two rows from Gemini*/
   margin: 40px 0;
   background-image: radial-gradient(var(--bright-yellow) 20%, transparent 20%);
   background-size: 30px 30px; /* disco-dot pattern gap */
@@ -144,6 +144,7 @@ body {
   color: yellow;
   padding-left: 20px;
 }
+
 .mini-card {
   height: 250px;
   background: white;
@@ -156,4 +157,37 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 574px) {
+  .product-main-row {
+    /* Switch to 1 column so the image has plenty of room to be big! */
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #product-card .image-container,
+  .info-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: 1fr 1fr; /* 2 items per row instead of 4 */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 726px) {
+  .recommendation-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 756px) {
+  .price-text {
+    font-size: medium;
+  }
 }
