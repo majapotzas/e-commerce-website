@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    </html>
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/cart.css" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600&display=swap"
-  rel="stylesheet"
-/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -20,38 +19,31 @@
           <li><a href="about.html">Our Story</a></li>
           <li>
             <a href="cart.html">Grocery List<span id="cart-count">0</span></a>
-        </li>
           </li>
         </ul>
       </nav>
     </header>
-  </body>
 
-<main class="cart-wrapper">
-  <h1 class="display-font">Your Grocery List</h1>
+    <main class="cart-wrapper">
+      <h1 class="display-font">Your Grocery List</h1>
 
-  <div id="cart-items-container">
-    <div class="cart-item">
-      <img src="images/olives.jpg" alt="Olives" />
-      <div class="item-info">
-        <h4 class="display-font">Gorgeous Green Olives</h4>
-        <p class="price">€4.50</p>
+      <div id="cart-items-list"></div>
+     
+
+      <div class="cart-summary">
+        <h3 class="display-font">
+          Total: <span id="cart-total-price">0.00SEK</span>
+        </h3>
+        <div class="cart-buttons">
+          <button class="secondary-btn" onclick="clearCart()">
+            Clear List
+          </button>
+          <button class="checkout-btn">Checkout →</button>
+        </div>
       </div>
-      <button class="remove-btn">REMOVE</button>
-    </div>
-  </div>
+    </main>
 
-  <div class="cart-summary">
-    <h3 class="display-font">
-      Total: <span id="cart-total-price">€4.50</span>
-    </h3>
-    <div class="cart-buttons">
-      <button class="secondary-btn" onclick="clearCart()">Empty List</button>
-      <button class="checkout-btn">Checkout →</button>
-    </div>
-  </div>
-</main>
-<footer class="footer">
+    <footer class="footer">
       <div class="footer-left">
         <div class="footer-content-wrapper">
           <div class="newsletter-group">
@@ -85,7 +77,7 @@
 
         <div class="footer-icons">
           <img src="images/Instagram-logo.png" alt="Insta" />
-          <img src="images/tiktok-logo.png" alt="Tiktok" />
+          <img src="images/tiktok-logo-png.webp" alt="Tiktok" />
           <img src="images/facebook-logo.png" alt="Facebook" />
         </div>
 

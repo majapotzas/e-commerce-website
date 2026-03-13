@@ -1,7 +1,11 @@
+body {
+  background-color: blue;
+}
 .cart-wrapper {
   padding: 4rem 2rem;
   max-width: 800px;
   margin: 0 auto;
+  color: white;
 }
 
 .cart-item {
@@ -12,12 +16,19 @@
   padding: 20px;
   margin-bottom: 20px;
   background-color: white;
-  box-shadow: 8px 8px 0px black; /* The 'Dancing Pot' shadow */
+  box-shadow: 8px 8px 0px black;
+  color: black;
 }
 
-.cart-item img {
-  width: 100px;
-  border: 3px solid black;
+#cart-items .display-font {
+  color: white;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 2.5rem;
 }
 
 .remove-btn {
@@ -31,8 +42,8 @@
 }
 
 .checkout-btn {
-  background-color: blue;
-  color: yellow;
+  background-color: yellow;
+  color: blue;
   font-family: "Bungee", cursive;
   padding: 15px 30px;
   border: 4px solid black;
@@ -44,4 +55,21 @@
 .checkout-btn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 7px 7px 0px black;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: black;
+  font-family: "Bungee", cursive;
+  padding: 12px 24px;
+  border: 4px solid black;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px black;
+  transition: transform 0.1s;
+}
+
+.secondary-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px black;
 }

@@ -58,7 +58,11 @@ body {
 .details-box h1 {
   font-size: 3rem;
   margin: 0 0 20px 0;
-  color: var(--disco-blue);
+  color: blue;
+}
+
+.details-box li {
+  list-style-type: "★ ";
 }
 
 .purchase-box {
@@ -120,10 +124,10 @@ body {
 
 /* THE HORIZONTAL GAP */
 .disco-divider {
-  height: 60px; /* The gap between your two rows */
+  height: 60px; /* The gap between my two rows */
   margin: 40px 0;
   background-image: radial-gradient(var(--bright-yellow) 20%, transparent 20%);
-  background-size: 30px 30px; /* Fun disco-dot pattern gap */
+  background-size: 30px 30px; /* disco-dot pattern gap */
 }
 
 /* BOTTOM GRID */
@@ -131,8 +135,15 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 0 auto;
 }
 
+.related-section h2 {
+  color: yellow;
+  padding-left: 20px;
+}
 .mini-card {
   height: 250px;
   background: white;
@@ -144,5 +155,5 @@ body {
 .mini-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }

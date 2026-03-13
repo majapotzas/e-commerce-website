@@ -40,6 +40,7 @@
   font-weight: 400;
   line-height: 1.1;
   font-family: "Bungee", cursive;
+  text-align: center;
 }
 
 .h2 {
@@ -71,7 +72,7 @@
 
 .hero-button:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .hero-zone {
@@ -87,7 +88,7 @@
 }
 
 .hero-zone:hover {
-  background: black;
+  background: blue;
   transform: scale(1.03);
 }
 
@@ -111,21 +112,6 @@
   text-decoration: none;
   pointer-events: auto;
 }
-/* margin-top: 0.5rem;
-  background: yellow;
-
-  color: blue;
-  padding: 0.8rem 1.8rem;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: "Bungee", cursive;
-  border: 4px solid black;
-  border-radius: 0;
-  box-shadow: px 6px 0px black;
-
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease; */
 
 .hero-zone:hover .zone-btn {
   opacity: 1;

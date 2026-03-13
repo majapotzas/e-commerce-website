@@ -27,14 +27,28 @@ body {
 }
 
 nav ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
-  display: flex;
-  gap: 1rem;
   padding: 0;
   margin: 0;
+  width: 100%;
+}
+
+/* Align the first item to the left */
+nav ul li:nth-child(1) {
+  text-align: left;
+}
+
+/* Align the middle item to the center */
+nav ul li:nth-child(2) {
+  text-align: center;
+}
+
+/* Align the last item to the right */
+nav ul li:nth-child(3) {
+  text-align: right;
 }
 
 nav a {
@@ -45,11 +59,12 @@ nav a {
 
 nav ul li a {
   padding: 0.5rem 1.2rem;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   background-color: yellow;
   color: blue;
 
   font-weight: 600;
+  border: 4px solid transparent;
   transition: all 0.25s ease;
 }
 
@@ -58,7 +73,10 @@ nav ul li a:hover {
   color: blue; */
   background-color: blue;
   color: yellow;
-  border: 4px solid black;
+  border: 2px solid black;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px black;
+
   transform: translateY(-2px);
 }
 
@@ -146,7 +164,7 @@ nav ul li a:hover {
 }
 
 .back-to-top:hover {
-  animation: wiggle 0.3s infinite; /* The "Dancing" effect */
+  animation: wiggle 0.3s infinite;
 }
 
 /* SIMPLE WIGGLE ANIMATION */
@@ -176,11 +194,16 @@ nav ul li a:hover {
 .footer-icons {
   display: flex;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .footer-icons img {
+  display: block;
   width: 45px;
+  height: 45px;
+  object-fit: contain;
   transition: transform 0.2s;
 }
 
@@ -220,7 +243,7 @@ nav ul li a:hover {
 }
 
 .groovy-list {
-  list-style-type: "★ "; /* Or any fun character like a star */
+  list-style-type: "★ ";
   padding-left: 20px;
   margin-bottom: 20px;
 }
@@ -249,4 +272,84 @@ nav ul li a:hover {
 .toast-visible {
   opacity: 1;
   transform: translateY(0); /* Slides it up into view */
+}
+
+/* --- MOBILE VIEW (Under 768px) --- */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0.5rem !important;
+  }
+
+  nav ul {
+    display: flex !important; /* Changed from Grid to Flex for better side-by-side scaling */
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 2rem !important; /* Even tighter gap for small screens */
+    grid-template-columns: none; /* Disables the 3-column grid from desktop */
+  }
+  /* 2. Shrink the font and padding of the actual buttons */
+  nav ul li a {
+    font-size: 0.75rem !important; /* Smaller Bungee font */
+    padding: 0.4rem 0.6rem !important; /* Slimmer buttons */
+    white-space: nowrap !important; /* Prevents "Grocery List" from breaking */
+  }
+
+  /* Product Section: 2-column small cards instead of 1-column big cards */
+  .products-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .footer-content-wrapper {
+    flex-direction: column; /* Newsletter and Hours stack */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .groovy-list {
+    text-align: left;
+  }
+
+  .hours-group {
+    text-align: center; /* Center the hours on mobile */
+  }
+
+  .display-font {
+    font-size: 1.5rem; /* Shrink big headings so they don't overflow */
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  .subscribe-form {
+    flex-direction: column; /* Input and Button stack */
+    text-align: left;
+  }
+
+  .arrow-btn {
+    width: 100%; /* Full width button for easy tapping */
+  }
+}
+
+/* --- TABLET VIEW (Under 1024px) --- */
+@media (max-width: 1024px) {
+  .product-main-row {
+    grid-template-columns: 1fr; /* Stacks image and info on top of each other */
+    gap: 2rem;
+  }
+
+  .footer {
+    padding: 2rem;
+    grid-template-columns: 1fr; /* Footer columns stack vertically */
+  }
+
+  .footer-left {
+    border-right: none;
+    border-bottom: 4px solid black; /* Move divider from side to bottom */
+    padding-bottom: 2rem;
+    padding-right: 0;
+  }
 }
