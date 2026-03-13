@@ -20,10 +20,6 @@ body {
   color: black;
 }
 
-/* #display-font {
-  color: yellow;
-} */
-
 .cart-buttons {
   display: flex;
   align-items: center;

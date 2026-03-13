@@ -1,3 +1,12 @@
+:root {
+  --disco-blue: blue;
+  --bright-yellow: yellow;
+  --hot-black: black;
+  --white: white;
+  --border-stroke: 4px solid var(--hot-black);
+  --brutalist-shadow: 8px 8px 0px var(--hot-black);
+}
+
 .hero {
   position: relative;
   height: 100vh;

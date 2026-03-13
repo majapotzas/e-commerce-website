@@ -1,4 +1,4 @@
-:root {
+:root { 
   --disco-blue: blue;
   --bright-yellow: yellow;
   --hot-black: black;
@@ -6,6 +6,7 @@
   --border-stroke: 4px solid var(--hot-black);
   --brutalist-shadow: 8px 8px 0px var(--hot-black);
 }
+ /* /used root as Gemini said this will be the easiest way to enable dark and light mode in the future */
 
 body {
   background-color: blue;
@@ -161,7 +162,7 @@ body {
 
 @media (max-width: 574px) {
   .product-main-row {
-    /* Switch to 1 column so the image has plenty of room to be big! */
+    /* Switch to 1 column so the image doesnt disapear */
     flex-direction: column;
     padding: 20px;
     gap: 20px;
